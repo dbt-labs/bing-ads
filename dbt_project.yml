@@ -11,7 +11,8 @@ data-paths: ["data"]
 models:
   bing_ads:
     vars:
-      ad_groups_table:      #schema.table
-      campaigns_table:      #schema.table
-      keywords_table:       #schema.table
-      performance_table:    #schema.table
+      etl:                                  #stitch / fivetran / etc. (currently only stitch supported)
+      ad_groups_table:                      #schema.table
+      campaigns_table:                      #schema.table
+      ads_table:                            #schema.table
+      keyword_performance_report_table:     #schema.table

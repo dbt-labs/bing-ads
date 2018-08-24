@@ -1,0 +1,1 @@
+{{ stitch_bing_keyword_performance() }}
