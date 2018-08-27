@@ -12,7 +12,8 @@ models:
   bing_ads:
     vars:
       etl:                                  #stitch / fivetran / etc. (currently only stitch supported)
+      accounts_table:                       #schema.table
       ad_groups_table:                      #schema.table
-      campaigns_table:                      #schema.table
       ads_table:                            #schema.table
+      campaigns_table:                      #schema.table
       keyword_performance_report_table:     #schema.table
