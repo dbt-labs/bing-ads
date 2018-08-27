@@ -1,0 +1,34 @@
+bing_accounts:
+    constraints:
+        not_null:
+            - account_id
+        unique:
+            - account_id
+            
+bing_ad_groups:
+    constraints:
+        not_null:
+            - ad_group_id
+        unique:
+            - ad_group_id
+            
+bing_ads:
+    constraints:
+        not_null:
+            - ad_id
+        unique:
+            - ad_id
+            
+bing_campaigns:
+    constraints:
+        not_null:
+            - campaign_id
+        unique:
+            - campaign_id
+            
+bing_keyword_performance:
+    constraints:
+        not_null:
+            - keyword_performance_report_id
+        unique:
+            - keyword_performance_report_id

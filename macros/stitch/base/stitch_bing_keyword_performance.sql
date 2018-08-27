@@ -16,10 +16,12 @@ with source as (
 renamed as (
 
     select
+    
+        "__SDC_PRIMARY_KEY" as keyword_performance_report_id,
 
         convert_timezone('UTC', gregoriandate)::timestamp_ntz::date 
             as campaign_date,
-        
+            
         accountid as account_id,
         adgroupid as ad_group_id,
         adid as ad_id,
@@ -49,6 +51,8 @@ renamed as (
 parsed as (
 
     select 
+    
+        keyword_performance_report_id,
         campaign_date,
         account_id,
         ad_group_id,
