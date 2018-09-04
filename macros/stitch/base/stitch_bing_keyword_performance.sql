@@ -24,8 +24,10 @@ renamed as (
             
         accountid as account_id,
         adgroupid as ad_group_id,
+        adgroupname as ad_group_name,
         adid as ad_id,
         campaignid as campaign_id,
+        campaignname as campaign_name,
         keywordid as keyword_id,
         
         campaignstatus as campaign_status,
@@ -56,8 +58,10 @@ parsed as (
         campaign_date,
         account_id,
         ad_group_id,
+        ad_group_name,
         ad_id,
         campaign_id,
+        campaign_name,
         campaign_status,
         
         url,

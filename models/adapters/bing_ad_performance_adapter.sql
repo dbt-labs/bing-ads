@@ -15,11 +15,12 @@ bing_keyword_performance_agg as (
         utm_campaign,
         utm_content,
         utm_term,
+        'bing ads' as platform,
         sum(clicks) as clicks,
         sum(impressions) as impressions,
         sum(spend) as spend
     from bing_keyword_performance
-    group by 1, 2, 3, 4, 5, 6, 7, 8
+    group by 1, 2, 3, 4, 5, 6, 7, 8, 9
 
 )
 
