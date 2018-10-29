@@ -10,18 +10,13 @@
 select
 
     id as ad_group_id,
-    searchbid as search_bid,
     startdate as start_date,
     status,
     language,
     name,
     network,
-    pricingmodel as pricing_model,
-    remarketingtargetingsetting as remarketing_targeting_setting,
-    addistribution as ad_distribution,
     adrotation as ad_rotation,
-    biddingscheme as bidding_scheme,
-    contentmatchbid as content_match_bid
+    biddingscheme as bidding_scheme
 
 from {{var('ad_groups_table')}}
 
