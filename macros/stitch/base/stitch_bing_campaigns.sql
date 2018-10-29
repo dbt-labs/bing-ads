@@ -18,7 +18,6 @@ select
     budgettype as budget_type,
     campaigntype as campaign_type,
     dailybudget as daily_budget,
-    nativebidadjustment as native_bid_adjustment,
     trackingurltemplate as tracking_url_template,
     urlcustomparameters as url_custom_parameters
 
