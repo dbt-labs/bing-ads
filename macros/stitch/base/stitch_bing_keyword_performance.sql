@@ -62,7 +62,7 @@ parsed as (
         
         url,
         split_part(split_part(url, '//', 2), '/', 1)::varchar as url_host,
-        '/' || split_part(url, '.com/', 2)::varchar as url_path,
+        '/' || split_part(url, '/', 4)::varchar as url_path,
         split_part(split_part(url,'utm_source=',2), '&', 1) as utm_source,
         split_part(split_part(url,'utm_medium=',2), '&', 1) as utm_medium,
         split_part(split_part(url,'utm_campaign=',2), '&', 1) as utm_campaign,
