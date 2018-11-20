@@ -48,7 +48,7 @@ renamed as (
 
 parsed as (
 
-    select 
+    select
     
         keyword_performance_report_id,
         campaign_date,
@@ -129,7 +129,7 @@ renamed as (
 
 parsed as (
 
-    select 
+    select
     
         keyword_performance_report_id,
         campaign_date,
