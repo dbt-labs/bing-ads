@@ -52,6 +52,7 @@ parsed as (
     
         keyword_performance_report_id,
         campaign_date,
+        keyword_id,
         account_id,
         ad_group_id,
         ad_group_name,
@@ -133,6 +134,7 @@ parsed as (
     
         keyword_performance_report_id,
         campaign_date,
+        keyword_id,
         account_id,
         ad_group_id,
         ad_group_name,
