@@ -7,6 +7,7 @@ with bing_keyword_performance as (
 bing_keyword_performance_agg as (
 
     select 
+    
         campaign_date,
         keyword_id as criteria_id,
         ad_group_id,
@@ -24,8 +25,9 @@ bing_keyword_performance_agg as (
         sum(clicks) as clicks,
         sum(impressions) as impressions,
         sum(spend) as spend
+        
     from bing_keyword_performance
-    group by 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14
+    {{ dbt_utils.group_by(14) }}
 
 )
 
