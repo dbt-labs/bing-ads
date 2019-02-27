@@ -19,7 +19,7 @@ renamed as (
     
         "__SDC_PRIMARY_KEY" as keyword_performance_report_id,
 
-        convert_timezone('UTC', gregoriandate)::timestamp_ntz::date 
+        convert_timezone('UTC', timeperiod)::timestamp_ntz::date 
             as campaign_date,
             
         accountid as account_id,
@@ -42,7 +42,7 @@ renamed as (
         spend,
         
         rank() over (
-            partition by gregoriandate::date 
+            partition by timeperiod::date 
             order by _sdc_report_datetime desc
             ) as rank
 
