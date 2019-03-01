@@ -4,7 +4,6 @@
 
 {% endmacro %}
 
-
 {% macro default__stitch_bing_keyword_performance() %}
 
 with source as (
@@ -52,10 +51,11 @@ renamed as (
 
 parsed as (
 
-    select 
+    select
     
         keyword_performance_report_id,
         campaign_date,
+        keyword_id,
         account_id,
         ad_group_id,
         ad_group_name,
@@ -65,13 +65,13 @@ parsed as (
         campaign_status,
         
         url,
-        replace(parse_url(url)['host']::varchar, 'www.', '') as url_host,
-        '/' || parse_url(url)['path']::varchar as url_path,
-        parse_url(url)['parameters']['utm_content']::varchar as utm_content,
-        parse_url(url)['parameters']['utm_term']::varchar as utm_term,
-        parse_url(url)['parameters']['utm_source']::varchar as utm_source,
-        parse_url(url)['parameters']['utm_campaign']::varchar as utm_campaign,
-        parse_url(url)['parameters']['utm_medium']::varchar as utm_medium,
+        {{ dbt_utils.get_url_host('url') }} as url_host,
+        '/' || {{ dbt_utils.get_url_path('url') }} as url_path,
+        {{ dbt_utils.get_url_parameter('url', 'utm_source') }} as utm_source,
+        {{ dbt_utils.get_url_parameter('url', 'utm_medium') }} as utm_medium,
+        {{ dbt_utils.get_url_parameter('url', 'utm_campaign') }} as utm_campaign,
+        {{ dbt_utils.get_url_parameter('url', 'utm_content') }} as utm_content,
+        {{ dbt_utils.get_url_parameter('url', 'utm_term') }} as utm_term,
         
         clicks,
         impressions,

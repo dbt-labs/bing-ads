@@ -1,34 +1,37 @@
-bing_accounts:
-    constraints:
-        not_null:
-            - account_id
-        unique:
-            - account_id
-            
-bing_ad_groups:
-    constraints:
-        not_null:
-            - ad_group_id
-        unique:
-            - ad_group_id
-            
-bing_ads:
-    constraints:
-        not_null:
-            - ad_id
-        unique:
-            - ad_id
-            
-bing_campaigns:
-    constraints:
-        not_null:
-            - campaign_id
-        unique:
-            - campaign_id
-            
-bing_keyword_performance:
-    constraints:
-        not_null:
-            - keyword_performance_report_id
-        unique:
-            - keyword_performance_report_id
+version: 2
+
+models:
+  - name: bing_accounts
+    columns:
+        - name: account_id
+          tests:
+              - unique
+              - not_null
+              
+  - name: bing_ad_groups
+    columns:
+        - name: ad_group_id
+          tests:
+              - unique
+              - not_null
+              
+  - name: bing_ads
+    columns:
+        - name: ad_id
+          tests:
+              - unique
+              - not_null
+              
+  - name: bing_campaigns
+    columns:
+        - name: campaign_id
+          tests:
+              - unique
+              - not_null
+              
+  - name: bing_keyword_performance
+    columns:
+        - name: keyword_performance_report_id
+          tests:
+              - unique
+              - not_null
