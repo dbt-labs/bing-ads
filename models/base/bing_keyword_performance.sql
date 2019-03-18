@@ -2,9 +2,7 @@
 
     {{ stitch_bing_keyword_performance() }}
     
-{% endif %}
-
-{% if var('etl') == 'fivetran' %}
+{% elif var('etl') == 'fivetran' %}
 
     {{ fivetran_bing_keyword_performance() }}
     

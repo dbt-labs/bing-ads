@@ -52,7 +52,7 @@ rollup as (
         sum(impressions) as impressions,
         sum(spend) as spend
     from source
-    group by 1, 2, 3, 4, 5, 6, 7
+    {{dbt_utils.group_by(7)}}
     
 ),
 
