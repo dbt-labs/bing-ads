@@ -11,7 +11,7 @@ data-paths: ["data"]
 models:
   bing_ads:
     vars:
-      etl:                                  stitch #currently only stitch supported
+      etl:                                  #stitch or fivetran
       accounts_table:                       #schema.table
       ad_groups_table:                      #schema.table
       ads_table:                            #schema.table
